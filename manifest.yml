@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-client
+spec:
+  containers:
+    - name: redis-client
+      image: ysugimoto/stunnel-redis
+      command: ["sh", "/boot.sh"]
+      tty: true
+      env:
+        - name: REDIS_URL
+          value: "somewhere.example.com:6379"
+      resources:
+        requests:
+          cpu: 125m
+          memory: 256Mi
+        limits:
+          cpu: 125m
+          memory: 256Mi
