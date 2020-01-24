@@ -13,3 +13,4 @@ debug = 7
 EOF
 
 stunnel /etc/stunnel/redis.conf
+tail -f /dev/null

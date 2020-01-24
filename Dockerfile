@@ -8,3 +8,4 @@ COPY ./boot.sh /boot.sh
 RUN chmod +x /boot.sh
 
 CMD ["/boot.sh"]
+
